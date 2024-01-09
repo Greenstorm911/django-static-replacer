@@ -3,7 +3,7 @@ import re
 # i would really apprecite a star or a fork =) <3
 def replace_pattern_in_text(input_file, output_file):
     pattern = r'(href|src)="assets/([^"]+)"'
-    replacement = r'href="{% static "/\2" %}"'
+    replacement = r'/\1="{% static "/\2" %}"'
     # removes assets from path and put the rest in the django tag
     
     try:
